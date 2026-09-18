@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="A romantic birthday surprise created with love for Bi.">
+  <title>Happy Birthday, My Bi ❤️ | A Special Surprise</title>
+
+  <!-- Google Fonts: Elegant Playfair Display, Great Vibes (Calligraphy), and Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================================================================
+       1. BACKGROUND MUSIC PLAYER
+       ===================================================================
+       INSTRUCTIONS FOR MUSIC:
+       - Place your favorite romantic music file in this folder.
+       - Name the file "music.mp3" (or change the src="music.mp3" below to your song filename).
+       - If no music file is added, clicking play will generate soft romantic ambient melody tones automatically!
+       =================================================================== -->
+  <div class="music-player-widget" id="musicWidget">
+    <audio id="bgAudio" loop>
+      <source src="music.mp3" type="audio/mpeg">
+      <source src="images/music.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-toggle-btn" id="musicToggleBtn" aria-label="Toggle Romantic Music">
+      <span class="music-icon" id="musicIcon">🎵</span>
+      <span class="music-text" id="musicText">Play Music</span>
+      <div class="sound-wave" id="soundWave">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </button>
+  </div>
+
+  <!-- ===================================================================
+       2. FIRST SCREEN: SURPRISE UNLOCK / LOCK SCREEN (BEGINNING SLIDE)
+       ===================================================================
+       This overlay displays first when she scans the QR code or opens the link.
+       =================================================================== -->
+  <section class="unlock-screen" id="unlockScreen">
+    <canvas id="introHeartCanvas"></canvas>
+    
+    <div class="unlock-card glass-panel">
+      <div class="gift-box-wrapper">
+        <div class="gift-box-icon">🎁</div>
+        <div class="glowing-ring"></div>
+      </div>
+
+      <!-- INTRO HEADING FOR BI -->
+      <h1 class="unlock-title">I made something special for you, my Bi ❤️</h1>
+      <p class="unlock-subtitle">A little corner of the internet curated with love, just for your special day, Bi.</p>
+      
+      <!-- UNLOCK BUTTON -->
+      <button class="btn-primary" id="unlockBtn">
+        <span>Open Your Gift 🎁</span>
+        <div class="btn-sparkles"></div>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- ===================================================================
+       3. MAIN BIRTHDAY SURPRISE PAGE (Revealed after clicking the gift)
+       =================================================================== -->
+  <main class="main-content" id="mainContent">
+
+    <!-- CANVAS FOR FLOATING HEARTS & SPARKLING PARTICLES -->
+    <canvas id="mainHeartCanvas"></canvas>
+
+    <!-- -----------------------------------------------------------------
+         3A. HERO BANNER (BEGINNING SLIDE)
+         ----------------------------------------------------------------- -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <div class="badge-pill">
+          <span class="sparkle">✨</span> TODAY IS ALL ABOUT YOU, MY BI <span class="sparkle">✨</span>
+        </div>
+
+        <h1 class="hero-title">Happy Birthday, My Bi ❤️</h1>
+
+        <p class="hero-subtitle">
+          You bring endless joy, warmth, and brightness into my world. 
+          Here is a trip through our sweetest moments together, my dear Bi...
+        </p>
+
+        <a href="#gallery" class="scroll-down-btn" aria-label="Scroll to memories">
+          <span>Explore Memories</span>
+          <div class="arrow-down">↓</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------
+         3B. PHOTO GALLERY SECTION (Memories)
+         ----------------------------------------------------------------- -->
+    <section class="section-padding gallery-section" id="gallery">
+      <div class="section-header">
+        <span class="section-tag">PHOTO GALLERY</span>
+        <h2 class="section-title">Memories of Us 📸</h2>
+        <p class="section-description">A collection of our favorite captured moments together. Tap any photo to view.</p>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Photo 1 -->
+        <div class="gallery-card glass-card">
+          <div class="card-image-wrap">
+            <img src="images/photo1.jpg.JPG" alt="Memory 1" class="gallery-img" data-photo="1">
+            <div class="image-overlay">
+              <span class="zoom-icon">🔍 Tap to view</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="gallery-card glass-card">
+          <div class="card-image-wrap">
+            <img src="images/photo2.jpg.JPG" alt="Memory 2" class="gallery-img" data-photo="2">
+            <div class="image-overlay">
+              <span class="zoom-icon">🔍 Tap to view</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gallery-card glass-card">
+          <div class="card-image-wrap">
+            <img src="images/photo3.jpg.JPG" alt="Memory 3" class="gallery-img" data-photo="3">
+            <div class="image-overlay">
+              <span class="zoom-icon">🔍 Tap to view</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="gallery-card glass-card">
+          <div class="card-image-wrap">
+            <img src="images/photo4.jpg.JPG" alt="Memory 4" class="gallery-img" data-photo="4">
+            <div class="image-overlay">
+              <span class="zoom-icon">🔍 Tap to view</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------
+         3C. OUR MEMORIES TIMELINE SECTION
+         ----------------------------------------------------------------- -->
+    <section class="section-padding memories-section" id="memories">
+      <div class="section-header">
+        <span class="section-tag">OUR JOURNEY</span>
+        <h2 class="section-title">Our Journey Together, Paapa 💫</h2>
+        <p class="section-description">A walk down memory lane, celebrating every milestone we've shared.</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+
+        <!-- Timeline Node 1 -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-badge">🌱</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">The Beginning</span>
+            <h3 class="timeline-title">Where It All Began</h3>
+            <p class="timeline-text">
+              The magical day our paths crossed. From our very first conversation, I knew there was something extraordinary about you, my sweet Bi.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Node 2 -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-badge">☕</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">First Date</span>
+            <h3 class="timeline-title">Butterflies & Coffee</h3>
+            <p class="timeline-text">
+              Nervous smiles, endless laughter, and hours that felt like minutes. That was the moment I started falling deeply for you.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Node 3 -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-badge">🌙</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">Late Night Talks</span>
+            <h3 class="timeline-title">Endless Conversations</h3>
+            <p class="timeline-text">
+              Staying up until midnight sharing our secrets, hopes, and deepest dreams. You quickly became my favorite person in the world, Paapa.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Node 4 -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-badge">✈️</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">Special Trips</span>
+            <h3 class="timeline-title">Adventures Hand in Hand</h3>
+            <p class="timeline-text">
+              Exploring new places, getting lost, taking silly photos, and creating sweet memories with you that I will treasure forever.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Node 5 -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-badge">🎂</div>
+          <div class="timeline-card glass-card highlight-card">
+            <span class="timeline-date">Today</span>
+            <h3 class="timeline-title">Celebrating You, Paapa!</h3>
+            <p class="timeline-text">
+              Another year wiser, more radiant, and more wonderful. I am so thankful to stand by your side on your special day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------
+         3D. A LETTER FOR YOU SECTION 💌
+         ----------------------------------------------------------------- -->
+    <section class="section-padding letter-section" id="letter">
+      <div class="section-header">
+        <span class="section-tag">FROM MY HEART</span>
+        <h2 class="section-title">A Letter For You 💌</h2>
+        <p class="section-description">A few words written straight from my heart to yours.</p>
+      </div>
+
+      <div class="letter-container reveal-on-scroll">
+        <div class="letter-card glass-card">
+          <div class="wax-seal">❤️</div>
+          
+          <div class="letter-header">
+            <p class="letter-salutation">To My Dearest Paapa,</p>
+          </div>
+
+          <div class="letter-body">
+            <p>
+              Happy Birthday, my sweet Paapa! On this wonderful day, I want to take a moment to tell you how incredibly special you are to me. You bring so much light, comfort, and happiness into my life every single day.
+            </p>
+            <p>
+              Your kindness, your sweet smile, and your beautiful heart never fail to brighten my world. Looking back at all the memories we've shared, I realize how truly blessed I am to have you by my side, my Bi.
+            </p>
+            <p>
+              May this new year of your life bring you endless smiles, success in all your dreams, and all the love you so truly deserve. I promise to always stand by your side, cherish you, and hold your hand through every step of life.
+            </p>
+          </div>
+
+          <div class="letter-footer">
+            <p class="letter-valediction">With all my love & affection,</p>
+            <p class="letter-signature">Forever Yours ❤️</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------
+         3E. FINAL EMOTIONAL FINALE SECTION (LAST SLIDE)
+         ----------------------------------------------------------------- -->
+    <section class="finale-section section-padding" id="finale">
+      <div class="finale-card glass-card reveal-on-scroll">
+        <div class="heart-burst-container">
+          <div class="glowing-heart-pulse">❤️</div>
+        </div>
+
+        <!-- ENDING HEADING FOR BI -->
+        <h2 class="finale-title">Happy Birthday, My Bi ❤️</h2>
+        <p class="finale-text">
+          I hope we create many more beautiful memories together, my sweet Bi.
+        </p>
+
+        <!-- INTERACTIVE KISS BUTTON FOR BI -->
+        <button class="btn-primary btn-kiss" id="kissBtn">
+          <span>Send A Kiss To Bi 💋</span>
+        </button>
+
+        <div class="finale-footer-text">
+          Made with endless love, especially for my Bi ✨
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================
+       4. PHOTO LIGHTBOX MODAL
+       =================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Enlarged photo">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
